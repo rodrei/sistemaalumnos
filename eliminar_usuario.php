@@ -29,13 +29,13 @@
 		echo 'El userid no está seteado, pinche madre!';
 		}
 
-	$query = "DELETE FROM usuariolibro WHERE UsuarioID = '$id'" or die("Error in the consult.." . mysqli_error($dbc));
+	$query = "DELETE FROM usuariolibro WHERE UsuarioID = '$id'";
+	$result = mysqli_query($dbc, $query) or die("Error in the consult.." . mysqli_error($dbc));
+	
+	$query = "DELETE FROM usuariodeportes WHERE UsuarioID = '$id'"; // or die("Error in the consult.." . mysqli_error($dbc));
 	$result = mysqli_query($dbc, $query);
 	
-	$query = "DELETE FROM usuariodeportes WHERE UsuarioID = '$id'" or die("Error in the consult.." . mysqli_error($dbc));
-	$result = mysqli_query($dbc, $query);
-	
-	$query = "DELETE FROM usuarios WHERE UsuarioID = '$id'" or die("Error in the consult.." . mysqli_error($dbc));
+	$query = "DELETE FROM usuarios WHERE UsuarioID = '$id'"; // or die("Error in the consult.." . mysqli_error($dbc));
 	$result = mysqli_query($dbc, $query);
 	mysqli_close($dbc);
 	?>

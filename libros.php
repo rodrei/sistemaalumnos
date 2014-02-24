@@ -23,7 +23,7 @@
 
 <br>
 <?php
-$dbc = mysqli_connect('localhost', 'Pepioca', 'samsonco3usb', 'sistemaalumnosdb');
+//$dbc = mysqli_connect('localhost', 'Pepioca', 'samsonco3usb', 'sistemaalumnosdb');
 
 $query = "SELECT libros.`LibroID`, libros.`Título`, libros.ISBN, COUNT(usuariolibro.`LibroID`) AS contador
 FROM libros 
@@ -62,3 +62,12 @@ mysqli_close($dbc);
 
 </body>
 </html>
+
+
+
+
+<?php while( ) >
+/*  <tr>
+    <td> <?php $row['Titulo'] ?> </td>
+*/
+?>
